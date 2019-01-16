@@ -1,0 +1,26 @@
+﻿@model SCBaseProject.Models.SysadminHomeViewModel
+
+@{
+    ViewBag.Title = "Overview";
+}
+
+<br />
+<div class="note note-info">
+    <p> Welcome System Admin! </p>
+</div>
+<table width="350px">
+    
+    <tr>
+        <th>Users</th>
+        <td><a href="@Url.Action("Index","SysUsers")">@Model.User</a></td>
+    </tr>
+    <tr>
+        <th>Companies</th>
+        <td><a href="@Url.Action("Index","SysCompanies")">@Model.Company</a></td>
+
+    </tr>
+   
+</table>
+
+
+

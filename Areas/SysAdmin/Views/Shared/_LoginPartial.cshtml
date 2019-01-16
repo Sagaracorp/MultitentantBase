@@ -1,0 +1,14 @@
+﻿@if (Session[SCBaseProject.Helpers.SessionConstants.SYSADMIN_SESSION_INFO] != null)
+{
+    using (Html.BeginForm("LogOff", "Home", FormMethod.Post, new { id = "logoutForm", @class = "navbar-right" }))
+    {
+        @Html.AntiForgeryToken()
+
+        <ul class="nav navbar-nav navbar-right">
+            <li>
+                <a href="#" class="Manage">@("Hello System Admin!")</a>
+            </li>
+            <li><a href="javascript:document.getElementById('logoutForm').submit()">Log off</a></li>
+        </ul>
+    }
+}
